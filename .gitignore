@@ -1,0 +1,20 @@
+# datasets
+*.pkl
+
+# model checkpoints
+*.pt
+
+# training logs & outputs
+train*.log
+*.png
+!sort_training_progression.png
+videos/
+
+# archived pick/push/pull pipeline
+archive_pickpushpull/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
