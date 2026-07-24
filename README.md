@@ -91,7 +91,7 @@ Tests all 4 instructions on identical scene resets, so behavior differences are 
 
 ### How the vision assist works
 
-The VAE gets the task structure right but its object localization blurs to ~5-10 cm, which fails 2 cm grasps. The assist fixes only that:
+As reported in the paper, MVAE isn't ideal for multi-object manipulation. The VAE gets the task structure right but its object localization blurs to ~5-10 cm, which fails 2 cm grasps. Hence, I've built a vision-based workaround. The assist fixes only that:
 
 1. **Detection**: threshold the camera image per color, take the largest connected blob, compute its pixel centroid.
 2. **Homography calibration**: over 20 random resets, pair detected pixel centroids with ground-truth object positions and fit a projective pixel -> table-xy map (one for the cube-top plane, one for the pad plane, since they sit at different heights). Mean error: ~0.2-0.6 cm.
