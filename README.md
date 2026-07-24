@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/8805134a-5fb3-47e3-b73d-d76c7bdf253e
 
 Reimplementation of [Bridging Language, Vision and Action: Multimodal VAEs in Robotic Manipulation Tasks](https://arxiv.org/abs/2404.01932) (Sejnova et al., 2024), adapted to the [ManiSkill 3](https://maniskill.readthedocs.io) simulator. The model learns a joint latent space over three modalities (a scene image, a language instruction, and a robot trajectory) and generates full end-effector trajectories from just an image + instruction.
 
-The paper uses the LANRO simulator; I used ManiSkill because I wanted to try it out (and lowkey because I'm from UCSD haha!). Since ManiSkill isn't language-based, instructions are generated per episode from templates ("put the red cube in the yellow box") and tokenized word-level with a small vocab.
+The paper uses the LANRO simulator; I used ManiSkill because I used it more frequently (and lowkey because I'm from UCSD haha!). Since ManiSkill isn't language-based, instructions are generated per episode from templates ("put the red cube in the yellow box") and tokenized word-level with a small vocab.
 
 ## Architecture
 
